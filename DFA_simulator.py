@@ -17,7 +17,7 @@ with open('input.json', 'r') as f:
 	# Melakukan iterasi setiap karakter dalam test_string
 	for c in test:
 		curr_state = transitions[curr_state][c] # Pindah ke state berikutnya berdasarkan transisi DFA
-		print(f' -> {curr_state}', end='') Mencetak jalur state yang dilewati
+		print(f' -> {curr_state}', end='') # Mencetak jalur state yang dilewati
 	
-	print(f"\nStatus: {'ACCEPTED' if curr_state in accept_states else 'REJECTED'}") Jika state akhir ada di accept_states akan diterima, jika tidak maka akan ditolak
+	print(f"\nStatus: {'ACCEPTED' if curr_state in accept_states else 'REJECTED'}") # Jika state akhir ada di accept_states akan diterima, jika tidak maka akan ditolak
 
